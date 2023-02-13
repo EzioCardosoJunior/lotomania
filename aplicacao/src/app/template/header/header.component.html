@@ -1,9 +1,9 @@
-<header class="navbar-light navbar-sticky header-static">	
+<header class="navbar-light navbar-sticky header-static">
 	<!-- Logo Nav START -->
 	<nav class="navbar navbar-expand-lg bg-info text-white">
 		<div class="container">
 			<!-- Logo START -->
-            <a class="nav-link" href="#">Inicio</a>
+			<a class="nav-link" href="#">Inicio</a>
 			<!-- <a class="navbar-brand" href="index.html">
 				<img class="navbar-brand-item light-mode-item" src="assets/images/logo.svg" alt="logo">			
 				<img class="navbar-brand-item dark-mode-item" src="assets/images/logo-light.svg" alt="logo">			
@@ -11,30 +11,35 @@
 			<!-- Logo END -->
 
 			<!-- Responsive navbar toggler -->
-			<button class="navbar-toggler ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler ms-auto collapsed" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="text-body h6 d-none d-sm-inline-block">Menu</span>
 				<span class="navbar-toggler-icon"></span>
-			</button>   
-			
+			</button>
+
 			<div class="nav flex-nowrap align-items-center">
 				<!-- Nav Button -->
 				<!-- <div class="nav-item d-none d-md-block">
 					<a href="#" class="btn btn-sm btn-danger mb-0 mx-2">Subscribe!</a>
 				</div> -->
 				<!-- Nav Search -->
-				<input class="form-control mx-3" type="search" placeholder="Selecione o concurso"
-					aria-label="Search">         
-				<div class="nav-item nav-search">
-					<a class="nav-link" role="button" href="#" id="navSearch" data-bs-toggle="dropdown" aria-expanded="false">
-						<i class="bi bi-search fs-4"> </i>
-					</a>					
-					<!-- <div class="dropdown-menu dropdown-menu-end shadow rounded p-2" aria-labelledby="navSearch">
+				<form class="d-flex" role="search" [formGroup]="numeroConcuro">
+					<input formControlName="concursoSelecionado" class="form-control mx-3" type="search" placeholder="Selecione o concurso"
+						aria-label="Search">
+					<div class="nav-item nav-search">
+						<a class="nav-link" role="button" href="#" id="navSearch" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							<i class="bi bi-search fs-4"> </i>
+						</a>
+						<!-- <div class="dropdown-menu dropdown-menu-end shadow rounded p-2" aria-labelledby="navSearch">
 						<form class="input-group">
 							<input class="form-control border-success" type="search" placeholder="Search" aria-label="Search">
 							<button class="btn btn-success m-0" type="submit">Search</button>
 						</form>
 					</div> -->
-				</div>				
+					</div>
+				</form>
 			</div>
 			<!-- Nav right END -->
 		</div>
