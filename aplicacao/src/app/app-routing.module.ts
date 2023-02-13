@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentComponent } from './template/content/content.component';
+import { HomeComponent } from './template/home/home.component';
 
 const routes: Routes = [
   {
     path:"app-content",
     component: ContentComponent
   },
+  {
+    path:"app-home",
+    component: HomeComponent
+  },
   
   {
     path: '', 
-    redirectTo: 'app-content', 
+    redirectTo: 'app-home', 
     pathMatch: 'full'
   },
 ];

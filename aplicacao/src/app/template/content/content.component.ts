@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ResultadosService } from 'src/app/services/resultados.service';
 
 @Component({
@@ -10,13 +10,14 @@ import { ResultadosService } from 'src/app/services/resultados.service';
 export class ContentComponent implements OnInit {
 
   resultadoSelecionado: any;
-  concursoSelecionado: any;
+  //concursoSelecionado: any;
 
-  constructor(private router: Router, private buscaResultadoLotomania: ResultadosService){}
+  constructor(private router: Router, private buscaResultadoLotomania: ResultadosService, private getRoute: ActivatedRoute) { }
 
   ngOnInit() {
-
-    this.buscaResultadoLotomania.buscaLotomania(this.concursoSelecionado).subscribe((result: any) =>{
+    const concursoSelecionado = this.getRoute.snapshot.queryParams['data'];
+    alert(concursoSelecionado)
+    this.buscaResultadoLotomania.buscaLotomania(concursoSelecionado).subscribe((result: any) => {
       this.resultadoSelecionado = result;
       console.log(this.resultadoSelecionado)
     })
@@ -26,6 +27,6 @@ export class ContentComponent implements OnInit {
   }
 
 
- 
+
 
 }

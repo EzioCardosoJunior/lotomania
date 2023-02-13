@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -11,21 +12,21 @@ export class HeaderComponent implements OnInit {
   public numeroConcuro!: FormGroup;
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.numeroConcuro = new FormGroup({
       concursoSelecionado: new FormControl(null),
-     
+
     })
   }
 
-  /* buscaDadosPaciente() {
-    this.router.navigate(['/app-tela-consulta'], { queryParams: {data: this.dadosPaciente.value.CpfCns, tipo: this.dadosPaciente.value.TipoLista} });
-    alert(this.dadosPaciente.value.TipoLista)
+  confereConcurso() {
+    this.router.navigate(['/app-content'], { queryParams: { data: this.numeroConcuro.value.concursoSelecionado } });
+    console.log(this.numeroConcuro.value.concursoSelecionado)
   }
- */
 
-  
+
+
 
 }
