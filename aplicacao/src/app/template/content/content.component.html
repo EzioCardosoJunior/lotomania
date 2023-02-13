@@ -4,8 +4,21 @@
             <app-sidebar></app-sidebar>
         </div>
 
-        <div class="col-sm-9">
 
+        <div class="col-sm-9">
+            <h4>50 selecionados:</h4>
+            <div class="row" >
+                <div class="d-grid d-md-block col-sm-1" *ngFor="let nn of numerosJogados">
+                    <button type="button" class="btn btn-primary position-relative my-1">
+                        {{nn}}
+                       
+                    </button>
+                </div>
+            </div>
+
+
+
+            
             <h4>Sorteados Concurso: {{resultadoSelecionado.numero}} realizado em {{resultadoSelecionado.dataApuracao}}</h4>
             <div class="row" >
                 <div class="d-grid d-md-block col-sm-1" *ngFor="let num of resultadoSelecionado.listaDezenas; index as i">
