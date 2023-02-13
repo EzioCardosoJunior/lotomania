@@ -10,20 +10,22 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class HeaderComponent implements OnInit {
 
   public numeroConcuro!: FormGroup;
-
-
   constructor(private router: Router) { }
-
   ngOnInit(): void {
     this.numeroConcuro = new FormGroup({
       concursoSelecionado: new FormControl(null),
-
     })
   }
 
-  confereConcurso() {
-    this.router.navigate(['/app-content'], { queryParams: { data: this.numeroConcuro.value.concursoSelecionado } });
+  confereConcurso() {   
+    const teste = this.numeroConcuro.value.concursoSelecionado
+    /* this.router.navigate(['/app-content'], { queryParams: { data: teste } });
     console.log(this.numeroConcuro.value.concursoSelecionado)
+ */
+    this.router.navigateByUrl('/app-home', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/app-content'], { queryParams: { data: teste } });
+  }); 
+    
   }
 
 

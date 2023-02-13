@@ -16,7 +16,6 @@ export class ContentComponent implements OnInit {
 
   ngOnInit() {
     const concursoSelecionado = this.getRoute.snapshot.queryParams['data'];
-    alert(concursoSelecionado)
     this.buscaResultadoLotomania.buscaLotomania(concursoSelecionado).subscribe((result: any) => {
       this.resultadoSelecionado = result;
       console.log(this.resultadoSelecionado)
