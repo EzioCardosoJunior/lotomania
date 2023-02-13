@@ -11,6 +11,7 @@ export class ResultadosService {
   constructor( private http: HttpClient ) { }
 
   buscaLotomania(conc: any){
+    !conc ? conc=" " : console.log(conc);
     return this.http.get(this.defaultCaixaUrl + conc);
   }
 }

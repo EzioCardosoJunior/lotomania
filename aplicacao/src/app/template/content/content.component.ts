@@ -10,12 +10,13 @@ import { ResultadosService } from 'src/app/services/resultados.service';
 export class ContentComponent implements OnInit {
 
   resultadoSelecionado: any;
+  concursoSelecionado: any;
 
   constructor(private router: Router, private buscaResultadoLotomania: ResultadosService){}
 
   ngOnInit() {
 
-    this.buscaResultadoLotomania.buscaLotomania(10).subscribe((result: any) =>{
+    this.buscaResultadoLotomania.buscaLotomania(this.concursoSelecionado).subscribe((result: any) =>{
       this.resultadoSelecionado = result;
       console.log(this.resultadoSelecionado)
     })
