@@ -10,6 +10,7 @@ import { SidebarComponent } from './template/sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './template/home/home.component';
+import { AcertosComponent } from './template/content/acertos/acertos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './template/home/home.component';
     FooterComponent,
     ContentComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    AcertosComponent
   ],
   imports: [
     BrowserModule,

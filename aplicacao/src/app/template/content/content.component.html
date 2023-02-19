@@ -1,26 +1,24 @@
 <div class="container-fluid">
     <div class="row content">
-       <!--  <div class="col-sm-3 sidenav hidden-xs">
+        <app-acertos></app-acertos>
+        <!--  <div class="col-sm-3 sidenav hidden-xs">
             <app-sidebar></app-sidebar>
-        </div>   -->     
-
+        </div>   -->
         <div class="col-sm-12">
             <h4>50 selecionados:</h4>
-            <div class="row" >
+            <div class="row">
                 <div class="d-grid d-md-block col-sm-1" *ngFor="let nn of numerosJogados">
                     <button type="button" class="btn btn-primary position-relative my-1">
                         {{nn}}
-                       
+
                     </button>
                 </div>
             </div>
-
-
-
-            
-            <h4>Sorteados Concurso: {{resultadoSelecionado.numero}} realizado em {{resultadoSelecionado.dataApuracao}}</h4>
-            <div class="row" >
-                <div class="d-grid d-md-block col-sm-1" *ngFor="let num of resultadoSelecionado.listaDezenas; index as i">
+            <h4>Sorteados Concurso: {{resultadoSelecionado.numero}} realizado em {{resultadoSelecionado.dataApuracao}}
+            </h4>
+            <div class="row">
+                <div class="d-grid d-md-block col-sm-1"
+                    *ngFor="let num of resultadoSelecionado.listaDezenas; index as i">
                     <button type="button" class="btn btn-primary position-relative my-1">
                         {{num}}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -31,133 +29,6 @@
             </div>
 
             <br>
-            <h4>Acertos</h4>
-           
-
-            <div class="row">
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>20 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>19 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>18 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>17 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>16 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>15 Pts</h6>                       
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>5 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>4 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>3 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>2 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>1 Pts</h6>                        
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <h6>0 Pts</h6>                        
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="well">
-                        <p>Text</p>                                                
-                    </div>
-                </div>
-            </div>
 
 
 
@@ -172,7 +43,7 @@
 
 
 
-            
+
         </div>
     </div>
 </div>
