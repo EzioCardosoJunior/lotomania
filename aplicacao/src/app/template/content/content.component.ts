@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ResultadosService } from 'src/app/services/resultados.service';
 
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -16,7 +17,10 @@ export class ContentComponent implements OnInit {
   constructor(private router: Router, private buscaResultadoLotomania: ResultadosService, private getRoute: ActivatedRoute) { }
 
   ngOnInit() {
-
+    /* var str = "texto de teste"
+    var chars = [...str]
+    console.log(chars)
+ */
     const linha1: any = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10",];
     const linha2: any = ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20",];
     const linha3: any = ["21", "22", "23", "24", "25", "26", "27", "28", "29", "30",];
@@ -39,20 +43,20 @@ export class ContentComponent implements OnInit {
     const posicao9: any = ["01", "02", "05", "07", "08"];
     const posicao10: any = ["01", "02", "04", "07", "09"];
 
-   
-        for (var i = 0; i < 5; i++) {
-            this.numerosJogados.push(linha1[parseInt(posicao1[i])]);
-            this.numerosJogados.push(linha2[parseInt(posicao2[i])]);
-            this.numerosJogados.push(linha3[parseInt(posicao3[i])]);
-            this.numerosJogados.push(linha4[parseInt(posicao4[i])]);
-            this.numerosJogados.push(linha5[parseInt(posicao5[i])]);
-            this.numerosJogados.push(linha6[parseInt(posicao6[i])]);
-            this.numerosJogados.push(linha7[parseInt(posicao7[i])]);
-            this.numerosJogados.push(linha8[parseInt(posicao8[i])]);
-            this.numerosJogados.push(linha9[parseInt(posicao9[i])]);
-            this.numerosJogados.push(linha10[parseInt(posicao10[i])]);
-        }
-        console.log(this.numerosJogados);
+
+    for (var i = 0; i < 5; i++) {
+      this.numerosJogados.push(linha1[parseInt(posicao1[i])]);
+      this.numerosJogados.push(linha2[parseInt(posicao2[i])]);
+      this.numerosJogados.push(linha3[parseInt(posicao3[i])]);
+      this.numerosJogados.push(linha4[parseInt(posicao4[i])]);
+      this.numerosJogados.push(linha5[parseInt(posicao5[i])]);
+      this.numerosJogados.push(linha6[parseInt(posicao6[i])]);
+      this.numerosJogados.push(linha7[parseInt(posicao7[i])]);
+      this.numerosJogados.push(linha8[parseInt(posicao8[i])]);
+      this.numerosJogados.push(linha9[parseInt(posicao9[i])]);
+      this.numerosJogados.push(linha10[parseInt(posicao10[i])]);
+    }
+    console.log(this.numerosJogados);
 
 
     const concursoSelecionado = this.getRoute.snapshot.queryParams['data'];
@@ -60,10 +64,6 @@ export class ContentComponent implements OnInit {
       this.resultadoSelecionado = result;
       console.log(this.resultadoSelecionado)
     })
-
   }
-
-
-
 
 }

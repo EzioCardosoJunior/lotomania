@@ -25,7 +25,7 @@
 				</div> -->
 				<!-- Nav Search -->
 				<form class="d-flex" role="search" [formGroup]="numeroConcuro">
-					<input formControlName="concursoSelecionado" class="form-control mx-3" type="search" placeholder="Selecione o concurso"
+					<input (keyup.enter)="confereConcurso()" formControlName="concursoSelecionado" class="form-control mx-3" type="search" placeholder="Selecione o concurso"
 						aria-label="Search">
 					<div class="nav-item nav-search">
 						<a class="nav-link" role="button" (click)="confereConcurso()" id="navSearch" data-bs-toggle="dropdown"
